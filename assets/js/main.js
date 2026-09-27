@@ -10,21 +10,24 @@ const pageLinks = [
 const headerHost = document.querySelector('[data-site-header]');
 const footerHost = document.querySelector('[data-site-footer]');
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.body.classList.add(`page-${currentPage.replace('.html', '')}`);
 
 if (headerHost) {
-  headerHost.innerHTML = `
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Praise and Power Zonal Headquarters home">
-          <img src="assets/images/logo.png" alt="">
-          <span class="brand-name">Praise and Power<span>Zonal Headquarters</span></span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-        <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
-          ${pageLinks.map(([href, label]) => `<a href="${href}"${href === currentPage ? ' aria-current="page"' : ''}${href === 'contact.html' ? ' class="nav-visit"' : ''}>${label === 'Contact' ? 'Plan a visit' : label}</a>`).join('')}
-        </nav>
-      </div>
-    </header>`;
+  headerHost.outerHTML = `
+      <div class="header-ribbon"><div class="container"><span><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Redemption Camp, Ogun State</span><span><i class="bi bi-sunrise-fill" aria-hidden="true"></i> Sunday worship · 8:00–11:30 AM</span></div></div>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html" aria-label="Praise and Power Zonal Headquarters home">
+            <img src="assets/images/logo.png" alt="">
+            <span class="brand-name">Praise <span class="brand-amp">&amp;</span> Power<span>Zonal Headquarters</span></span>
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation"><i class="bi bi-list" aria-hidden="true"></i></button>
+          <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+            ${pageLinks.map(([href, label]) => `<a href="${href}"${href === currentPage ? ' aria-current="page"' : ''}${href === 'contact.html' ? ' class="nav-visit"' : ''}>${label === 'Contact' ? 'Plan a visit <i class="bi bi-arrow-up-right" aria-hidden="true"></i>' : label}</a>`).join('')}
+          </nav>
+        </div>
+      </header>
+    `;
 }
 
 if (footerHost) {
@@ -32,15 +35,20 @@ if (footerHost) {
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
-          <div>
-            <div class="footer-brand"><img src="assets/images/logo.png" alt=""><strong>Praise and Power<br>Zonal Headquarters</strong></div>
+          <div class="footer-identity">
+            <div class="footer-brand"><img src="assets/images/logo.png" alt=""><strong>Praise <span>&amp;</span> Power<small>Zonal Headquarters</small></strong></div>
             <p class="footer-tagline">Where faith ignites, lives transform, and destiny is fulfilled.</p>
+            <div class="footer-socials" aria-label="Social media">
+              <a href="https://www.instagram.com/official_praiseandpowerparish/" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/share/1CHg85GJvB/" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+              <a href="https://t.me/praiseandpower" target="_blank" rel="noreferrer" aria-label="Telegram"><i class="bi bi-telegram" aria-hidden="true"></i></a>
+            </div>
           </div>
           <div class="footer-col"><h2>Explore</h2><ul>${pageLinks.map(([href, label]) => `<li><a href="${href}">${label}</a></li>`).join('')}</ul></div>
-          <div class="footer-col"><h2>Gather with us</h2><ul><li><p>Sunday worship · 8:00–11:30 AM</p></li><li><p>Tuesday · 6:00 PM</p></li><li><p>Thursday · 6:00 PM</p></li></ul></div>
-          <div class="footer-col"><h2>Find us</h2><p>Estate 11, Redemption Camp,<br>Ogun State, Nigeria</p><p style="margin-top:10px"><a href="tel:+2348034748050">+234 803 474 8050</a></p><p><a href="mailto:praiseandpower25@gmail.com">praiseandpower25@gmail.com</a></p><p style="margin-top:10px"><a href="https://www.instagram.com/official_praiseandpowerparish/" target="_blank" rel="noreferrer">Instagram</a> · <a href="https://www.facebook.com/share/1CHg85GJvB/" target="_blank" rel="noreferrer">Facebook</a> · <a href="https://t.me/praiseandpower" target="_blank" rel="noreferrer">Telegram</a></p></div>
+          <div class="footer-col"><h2>Gather with us</h2><ul><li><p>Sunday worship <span>8:00–11:30 AM</span></p></li><li><p>Digging Deep <span>Tuesday · 6:00 PM</span></p></li><li><p>Faith Clinic <span>Thursday · 6:00 PM</span></p></li></ul></div>
+          <div class="footer-col"><h2>Find us</h2><p class="footer-contact"><a href="https://maps.google.com/?q=Redemption+Camp,+Ogun+State,+Nigeria" target="_blank" rel="noreferrer"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Estate 11, Redemption Camp,<br>Ogun State, Nigeria</span></a></p><p class="footer-contact"><a href="tel:+2348034748050"><i class="bi bi-telephone" aria-hidden="true"></i> +234 803 474 8050</a></p><p class="footer-contact"><a href="mailto:praiseandpower25@gmail.com"><i class="bi bi-envelope" aria-hidden="true"></i> praiseandpower25@gmail.com</a></p></div>
         </div>
-        <div class="footer-bottom">&copy; <span data-year></span> Praise and Power Zonal Headquarters. All rights reserved.</div>
+        <div class="footer-bottom"><span>&copy; <span data-year></span> Praise and Power Zonal Headquarters</span><a href="contact.html">Plan your visit <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div>
       </div>
     </footer>`;
 }
@@ -52,8 +60,17 @@ const siteNavigation = document.querySelector('.site-nav');
 menuToggle?.addEventListener('click', () => {
   const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
   menuToggle.setAttribute('aria-expanded', String(!expanded));
+  menuToggle.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+  menuToggle.innerHTML = `<i class="bi ${expanded ? 'bi-list' : 'bi-x-lg'}" aria-hidden="true"></i>`;
   siteNavigation?.classList.toggle('is-open', !expanded);
 });
+
+siteNavigation?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  menuToggle?.setAttribute('aria-label', 'Open navigation');
+  if (menuToggle) menuToggle.innerHTML = '<i class="bi bi-list" aria-hidden="true"></i>';
+  siteNavigation.classList.remove('is-open');
+}));
 
 const revealObserver = 'IntersectionObserver' in window
   ? new IntersectionObserver(entries => entries.forEach(entry => {
@@ -81,14 +98,43 @@ document.querySelectorAll('[data-giving-tab]').forEach(tab => {
 });
 
 const contactForm = document.querySelector('#contact-form');
-contactForm?.addEventListener('submit', event => {
+contactForm?.addEventListener('submit', async event => {
   event.preventDefault();
-  const fields = new FormData(contactForm);
-  const subject = encodeURIComponent(fields.get('subject') || 'Website message');
-  const body = encodeURIComponent(`From: ${fields.get('name')}\nEmail: ${fields.get('email')}\nPhone: ${fields.get('phone') || 'Not provided'}\n\n${fields.get('message')}`);
+  const submitButton = contactForm.querySelector('button[type="submit"]');
   const status = document.querySelector('[data-form-status]');
-  if (status) status.textContent = 'Your email app is opening with your message ready to send.';
-  window.location.href = `mailto:praiseandpower25@gmail.com?subject=${subject}&body=${body}`;
+  const idleButtonContent = submitButton?.innerHTML;
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.setAttribute('aria-busy', 'true');
+    submitButton.innerHTML = '<i class="bi bi-arrow-repeat" aria-hidden="true"></i> Sending...';
+  }
+  if (status) status.textContent = 'Sending your message...';
+
+  try {
+    const payload = Object.fromEntries(new FormData(contactForm).entries());
+    payload._replyto = payload.email;
+    const response = await fetch('https://formsubmit.co/ajax/praiseandpower25@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+    if (!response.ok || (result.success !== true && result.success !== 'true')) {
+      throw new Error(result.message || 'The message could not be sent.');
+    }
+    contactForm.reset();
+    if (status) status.textContent = '';
+    window.alert('Your message has been sent. You will be replied to shortly.');
+  } catch (error) {
+    if (status) status.textContent = 'We could not send your message. Please try again or email praiseandpower25@gmail.com.';
+    window.alert('Your message could not be sent. Please try again or email praiseandpower25@gmail.com.');
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.removeAttribute('aria-busy');
+      submitButton.innerHTML = idleButtonContent;
+    }
+  }
 });
 
 const lightbox = document.querySelector('.lightbox');
