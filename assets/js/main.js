@@ -23,7 +23,7 @@
 
   /* ---------- Header ---------- */
   var headerSlot = document.querySelector('[data-site-header]');
-  if (headerSlot) {
+  if (headerSlot && !headerSlot.querySelector('.site-header')) {
     var nav = links.map(function (l) {
       return '<a href="' + l[0] + '"' + (isCurrent(l[0]) ? ' aria-current="page"' : '') + '>' + l[1] + '</a>';
     }).join('');
@@ -46,6 +46,8 @@
         '</div>' +
       '</header>';
   }
+  var currentNavLink = document.querySelector('.site-nav a[href="' + page + '.html"]');
+  if (currentNavLink) currentNavLink.setAttribute('aria-current', 'page');
 
   /* ---------- Footer ---------- */
   var footerSlot = document.querySelector('[data-site-footer]');
@@ -583,18 +585,6 @@
   top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   d.body.appendChild(top);
   window.addEventListener('scroll', function () { top.classList.toggle('is-on', window.scrollY > 700); }, { passive: true });
-
-  /* ---------- Page transitions ---------- */
-  d.addEventListener('click', function (e) {
-    var a = e.target.closest('a[href]');
-    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || a.target === '_blank') return;
-    var h = a.getAttribute('href');
-    if (!/^[\w-]+\.html(#.*)?$/.test(h)) return;
-    e.preventDefault();
-    d.body.classList.add('page-leave');
-    setTimeout(function () { location.href = h; }, 320);
-  });
-  window.addEventListener('pageshow', function (e) { if (e.persisted) d.body.classList.remove('page-leave'); });
 
   /* ---------- Chatbot teaser ---------- */
   var cb = $('.chatbot');
