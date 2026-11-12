@@ -219,7 +219,7 @@
       a: 'Welcome! Your first Sunday is on us. Come as you are; first-time guests are very welcome. Services start at 8:00 AM on Sundays at Estate 11, Redemption City of God.',
       link: ['contact.html', 'Plan your visit'] },
     { k: ['pastor', 'leader', 'leadership', 'head', 'usher', 'media', 'choir', 'protocol'],
-      a: 'Our Zonal Pastor is Pastor Olusegun Ogunsanwo. Department heads include Dcns. Silas Akinsipe (Media), Pst. Remi Jibodu (Protocol) and Sis. Helen Delight (Choir).',
+      a: 'Our Zonal Pastor is Pastor Olusegun Ogunsanwo. Department heads include Dcns. Silas Akinsipe (Media), Dcns. Remi Jibodu (Protocol) and Sis. Helen Delight (Choir).',
       link: ['leadership.html', 'Meet the leadership'] },
     { k: ['building', 'project', 'construction', 'raised', 'goal', 'seating', 'dedication'],
       a: 'The building project launched in 2025, with a planned seating capacity of 5,000. It is in Phase 2 (roofing & walls), with a 2027 target for dedication. The latest supplied update records ₦45,000,000 raised toward a ₦200,000,000 goal.',
