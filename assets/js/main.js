@@ -32,7 +32,7 @@
       '<header class="site-header">' +
         '<div class="header-ribbon"><div class="container">' +
           '<span><i class="bi bi-clock-fill"></i> Sundays 8:00 AM – 11:30 AM</span>' +
-          '<span><i class="bi bi-geo-alt-fill"></i> Estate 11, Redemption Camp</span>' +
+          '<span><i class="bi bi-geo-alt-fill"></i> Estate 11, Redemption City of God</span>' +
         '</div></div>' +
         '<div class="container header-inner">' +
           '<a class="brand" href="index.html" aria-label="Praise and Power Zonal Headquarters home">' +
@@ -74,10 +74,10 @@
             '<li><p>Faith Clinic (Thursday)<span>6:00 PM</span></p></li>' +
           '</ul></div>' +
           '<div class="footer-col"><h2>Find us</h2>' +
-            '<p>Estate 11, Redemption Camp<br>Ogun State, Nigeria</p>' +
+            '<p>Estate 11, Redemption City of God<br>Ogun State, Nigeria</p>' +
             '<p class="footer-contact"><a href="tel:+2348034748050"><i class="bi bi-telephone-fill"></i> +234 803 474 8050</a></p>' +
             '<p class="footer-contact"><a href="mailto:praiseandpower25@gmail.com"><i class="bi bi-envelope-fill"></i> praiseandpower25@gmail.com</a></p>' +
-            '<p class="footer-contact"><a href="https://maps.google.com/?q=Redemption+Camp,+Ogun+State,+Nigeria" target="_blank" rel="noreferrer"><i class="bi bi-geo-alt-fill"></i> Get directions</a></p>' +
+            '<p class="footer-contact"><a href="https://maps.google.com/?q=Redemption+City+of+God,+Ogun+State,+Nigeria" target="_blank" rel="noreferrer"><i class="bi bi-geo-alt-fill"></i> Get directions</a></p>' +
           '</div>' +
         '</div>' +
         '<div class="footer-bottom"><span>&copy; <span data-year></span> Praise and Power Zonal Headquarters. All rights reserved.</span><a href="#top">Back to top &uarr;</a></div>' +
@@ -210,16 +210,16 @@
     { k: ['thursday', 'faith clinic', 'prayer'],
       a: 'Faith Clinic is our corporate intercession and worship, every Thursday at 6:00 PM. Come and pray with us.' },
     { k: ['where', 'location', 'address', 'direction', 'find you', 'map'],
-      a: 'We are at Estate 11, Redemption Camp, Ogun State, Nigeria. You can get directions on the Contact page.',
+      a: 'We are at Estate 11, Redemption City of God, Ogun State, Nigeria. You can get directions on the Contact page.',
       link: ['contact.html', 'Open Contact page'] },
     { k: ['phone', 'call', 'number', 'email', 'mail', 'contact', 'reach'],
       a: 'You can call +234 803 474 8050 or email praiseandpower25@gmail.com. You can also send a message from the Contact page.',
       link: ['contact.html', 'Open Contact page'] },
     { k: ['first visit', 'first time', 'new here', 'visit', 'newcomer', 'guest'],
-      a: 'Welcome! Your first Sunday is on us. Come as you are; first-time guests are very welcome. Services start at 8:00 AM on Sundays at Estate 11, Redemption Camp.',
+      a: 'Welcome! Your first Sunday is on us. Come as you are; first-time guests are very welcome. Services start at 8:00 AM on Sundays at Estate 11, Redemption City of God.',
       link: ['contact.html', 'Plan your visit'] },
     { k: ['pastor', 'leader', 'leadership', 'head', 'usher', 'media', 'choir', 'protocol'],
-      a: 'Our Zonal Pastor is Pastor Olusegun Ogunsanwo. Department heads include Pst. Silas Akinsipe (Media), Pst. Remi Jibodu (Protocol) and Sis. Helen Delight (Choir).',
+      a: 'Our Zonal Pastor is Pastor Olusegun Ogunsanwo. Department heads include Dcns. Silas Akinsipe (Media), Pst. Remi Jibodu (Protocol) and Sis. Helen Delight (Choir).',
       link: ['leadership.html', 'Meet the leadership'] },
     { k: ['building', 'project', 'construction', 'raised', 'goal', 'seating', 'dedication'],
       a: 'The building project launched in 2025, with a planned seating capacity of 5,000. It is in Phase 2 (roofing & walls), with a 2027 target for dedication. The latest supplied update records ₦45,000,000 raised toward a ₦200,000,000 goal.',
