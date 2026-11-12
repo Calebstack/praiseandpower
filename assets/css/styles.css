@@ -157,7 +157,7 @@ h1 em, h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; 
 .site-nav .nav-visit:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(7,168,62,.5); }
 
 /* ============ Footer ============ */
-.site-footer { position: relative; z-index: 2; margin-top: calc(var(--curve) * -1); padding: calc(var(--curve) + 70px) 0 clamp(110px, 15vw, 230px); border-radius: var(--curve) var(--curve) 0 0; overflow: hidden; background: radial-gradient(800px 500px at 90% 0%, rgba(7,168,62,.3), transparent 62%), radial-gradient(700px 500px at 0% 100%, rgba(122,92,255,.35), transparent 62%), var(--night); color: #fff; }
+.site-footer { position: relative; z-index: 2; margin-top: calc(var(--curve) * -1); padding: calc(var(--curve) + 16px) 0 clamp(110px, 15vw, 230px); border-radius: var(--curve) var(--curve) 0 0; overflow: hidden; background: radial-gradient(800px 500px at 90% 0%, rgba(7,168,62,.3), transparent 62%), radial-gradient(700px 500px at 0% 100%, rgba(122,92,255,.35), transparent 62%), var(--night); color: #fff; }
 .site-footer::after { position: absolute; z-index: 1; left: 50%; bottom: -.17em; transform: translateX(-50%); color: transparent; content: 'PRAISE & POWER'; font-family: var(--display); font-size: clamp(44px, 10.2vw, 168px); font-weight: 800; line-height: 1; letter-spacing: -.03em; white-space: nowrap; -webkit-text-stroke: 1.5px rgba(255,223,138,.28); pointer-events: none; }
 .footer-cta { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-bottom: 72px; padding: 38px 44px; border: 1px solid rgba(255,255,255,.16); border-radius: 32px; background: linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.03)); backdrop-filter: blur(14px); }
 .footer-cta .eyebrow { margin-bottom: 10px; }
@@ -638,6 +638,14 @@ h1 em, h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; 
 .contact-detail h3 { margin: 0 0 4px; font-family: var(--sans); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .contact-detail p { margin: 0; font-size: 14px; line-height: 1.65; }
 .contact-detail a { color: var(--green-deep); font-weight: 700; overflow-wrap: anywhere; text-decoration-color: var(--gold); }
+main > .contact-faq { padding-top: 40px; }
+.contact-faq .section-heading { margin-bottom: 32px; }
+.contact-faq-list { max-width: 900px; }
+.contact-faq-list details { padding: 20px 24px; border-bottom: 1px solid var(--line); }
+.contact-faq-list details:first-child { border-top: 1px solid var(--line); }
+.contact-faq-list summary { color: var(--ink); font-family: var(--display); font-size: 19px; font-weight: 700; cursor: pointer; }
+.contact-faq-list details p { margin: 12px 0 0; }
+.contact-faq-list a { color: var(--green-deep); font-weight: 700; }
 .map-link { display: inline-block; margin-top: 8px; }
 
 /* ============ Responsive ============ */
